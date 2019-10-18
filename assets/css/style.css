@@ -24,7 +24,10 @@
   opacity: 0.6;
 }
 
-.call-to-action {background:#0086d2; padding:40px 0;}
+.call-to-action {
+  background:#0086d2;
+  padding:40px 0;
+}
 
 .btn {
     border-radius: 5px;
@@ -37,6 +40,15 @@
     background: #fff;
     color: #666;
     border-bottom: 4px solid #ddd;
+}
+
+.page-content {
+  background-image: url("../img/burgers.jpg");
+  background-size: cover;
+}
+
+.pt-5, .py-5 {
+  color: white;
 }
 
 footer {
