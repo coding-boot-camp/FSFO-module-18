@@ -1,6 +1,11 @@
 
 body {
   height: 100vh;
+  min-height: 1500px;
+}
+
+#wrap {
+  min-height: 100%;
 }
 
 .fullscreen-carousel {
