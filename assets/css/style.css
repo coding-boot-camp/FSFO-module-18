@@ -63,4 +63,5 @@ body {
 
 footer {
   background: #666;
+  z-index: 999;
 }
