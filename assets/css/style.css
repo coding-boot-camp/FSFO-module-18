@@ -1,3 +1,8 @@
+
+body {
+  height: 100vh;
+}
+
 .fullscreen-carousel {
   height: 100vh;
   min-height: 350px;
