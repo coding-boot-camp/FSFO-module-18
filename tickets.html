@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="assets/js/script.js"></script>
   <script src="assets/js/vendor/jQuery.js"></script>
   <script src="assets/js/vendor/bootstrap.js"></script>
 </head>
@@ -97,10 +98,15 @@
                 <option>2 Passes</option>
                 <option>3 Passes</option>
               </select>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="purchaseEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Nevermind!</button>
-              <button type="button" class="btn btn-primary">Purchase</button>
+              <button type="button" class="btn btn-primary" id="purchaseBtn">Purchase</button>
             </div>
           </div>
         </div>
