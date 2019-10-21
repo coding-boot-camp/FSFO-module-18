@@ -4,8 +4,8 @@ body {
   min-height: 1500px;
 }
 
-#wrap {
-  min-height: 100%;
+footer {
+  background: #666;
 }
 
 .fullscreen-carousel {
@@ -40,16 +40,16 @@ body {
 }
 
 .btn {
-    border-radius: 5px;
-    margin: 21px 0 0 0;
-    font-weight:700;
-    cursor: pointer;
+  border-radius: 5px;
+  margin: 21px 0 0 0;
+  font-weight:700;
+  cursor: pointer;
 }
 
 .btn.btn-white {
-    background: #fff;
-    color: #666;
-    border-bottom: 4px solid #ddd;
+  background: #fff;
+  color: #666;
+  border-bottom: 4px solid #ddd;
 }
 
 .page-content {
@@ -61,6 +61,13 @@ body {
   color: white;
 }
 
-footer {
-  background: #666;
+#ticket-footer {
+  bottom: 0px;
+  z-index: -1;
+  width: 100vw;
+  position: fixed;
+}
+
+#wrap {
+  min-height: 100%;
 }

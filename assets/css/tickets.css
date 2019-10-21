@@ -1,0 +1,13 @@
+#ticket-table {
+	margin-top: 12rem;
+	height: 45vh;
+	font-size: 18px;
+}
+body {
+	background-image: url(../img/falafel.jpg);
+	background-size: cover;
+	overflow: hidden;
+}
+td {
+	padding: 5px;
+}
