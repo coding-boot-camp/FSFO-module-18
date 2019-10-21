@@ -159,9 +159,6 @@ $(document).ready(function() {
       description: ""
     };
 
-    console.log(currentEvent)
-
-
     const pageEl = document.querySelector("#page");
 
     function createEl(htmlString, attrs, ...children) {
@@ -205,8 +202,8 @@ $(document).ready(function() {
         createEl("img", {class: "card-img-top", style: "width: 5px", src: currentEvent.image || "https://via.placeholder.com/350x150"}),
         createEl("div", {class: "card-body"}, 
           createEl("h1", {class: "card-title"}, currentEvent.title || ""),
-          createEl("h2", {class: "card-subtitle"}, currentEvent.subtitle || ""),
-          createEl("p", {class: "card-text"}, currentEvent.description || loremIpsum),
+          createEl("h2", {class: "text-muted"}, currentEvent.subtitle || ""),
+          createEl("p", {class: "card-text mt-3"}, currentEvent.description || loremIpsum),
           createEl("a", {class: "btn btn-primary", href: "tickets.html"}, "Buy Tickets")
         )
       ),
@@ -214,6 +211,7 @@ $(document).ready(function() {
     )
     pageEl.appendChild(containerEl)
   }
+  // END OF EVENT PAGE
 
   // TICKET PAGE
   if(window.location.href.indexOf("ticket") > -1) {
@@ -228,4 +226,5 @@ $(document).ready(function() {
     }
     purchaseBtn.addEventListener("click", purchaseTicket);
   }
+  // END OF TICKET PAGE
 })

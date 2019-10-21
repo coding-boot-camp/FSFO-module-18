@@ -2,11 +2,14 @@
 body {
   margin-top: 100px !important;
   height: 100vh;
-  min-height: 1500px;
+  min-height: 1000px;
 }
 
 footer {
   background: #666;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
 }
 
 .fullscreen-carousel {
@@ -62,16 +65,10 @@ footer {
   color: white;
 }
 
-footer {
-  background: #666;
-  z-index: 999;
-}
-
 #ticket-footer {
-  bottom: 0px;
-  z-index: -1;
+  bottom: 0;
   width: 100vw;
-  position: fixed;
+  position: absolute;
 }
 
 #wrap {
