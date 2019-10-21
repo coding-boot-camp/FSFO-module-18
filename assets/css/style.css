@@ -78,6 +78,8 @@ footer {
   min-height: 100%;
 }
 
-.table > tbody > tr > td{
-  vertical-align: middle;
+.card-img-top {
+  width: 100%;
+  max-height: 30vw;
+  object-fit: cover;
 }
