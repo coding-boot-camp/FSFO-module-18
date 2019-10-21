@@ -9,4 +9,9 @@ function createEl(htmlString = "", className) {
   return el;
 }
 
+const containerEl = createEl("div", "container")
+const events = createEl("h1")
+events.textContent = "Events"
+containerEl.appendChild(events)
 
+pageEl.appendChild(containerEl)
