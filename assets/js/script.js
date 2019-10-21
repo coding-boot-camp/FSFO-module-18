@@ -9,13 +9,6 @@ $(document).ready(function() {
     var m = date.getMonth();
     var y = date.getFullYear();
 
-    /*  className colors
-
-    className: default(transparent), important(red), chill(pink), success(green), info(blue)
-
-    */
-
-
     /* initialize the external events
     -----------------------------------------------------------------*/
 
@@ -219,20 +212,20 @@ $(document).ready(function() {
       ),
       
     )
-
-    /*
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-  </div>
-</div>
-    */
-
-      pageEl.appendChild(containerEl)
-
+    pageEl.appendChild(containerEl)
   }
 
+  // TICKET PAGE
+  if(window.location.href.indexOf("ticket") > -1) {
+    const purchaseBtn = document.getElementById("purchaseBtn");
+    const modalEl = document.querySelector(".modal-content");
+    const purchaseEmail = document.getElementById("purchaseEmail");
+
+
+    function purchaseTicket () {
+      modalEl.textContent = `Thanks for requesting a ticket purchase! We will send an email to ${purchaseEmail.value} to complete the order form!`
+      console.log("purchased a ticket");
+    }
+    purchaseBtn.addEventListener("click", purchaseTicket);
+  }
 })

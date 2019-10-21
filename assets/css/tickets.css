@@ -10,7 +10,10 @@ td {
 .purchase {
 	height: 100px;
 	width: 150px;
+}
 
+.option1 {
+	margin-bottom: 10px;
 }
 #ticket-table {
 	margin-top: 12rem;
