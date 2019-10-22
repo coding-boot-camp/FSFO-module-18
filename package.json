@@ -1,0 +1,22 @@
+{
+    "name": "module-18-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "assets/js/script.js",
+    "scripts": {
+        "webpack": "webpack --watch",
+        "build": "webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "webpack": "^4.32.2",
+        "webpack-cli": "^3.3.2"
+    },
+    "dependencies": {
+        "jquery": "^3.4.1",
+        "popper.js": "^1.16.0"
+    }
+}
