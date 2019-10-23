@@ -16,7 +16,7 @@ const config = {
     rules: [
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: 'file-loader?name=[name].[ext]&outputPath=./dist/images/'
+        use: 'file-loader?name=[name].[ext]&outputPath=dist/images/'
       },
     ],
   },

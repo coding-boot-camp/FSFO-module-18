@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"images/chips.jpg\";\n\n//# sourceURL=webpack:///./assets/img/chips.jpg?");
+eval("module.exports = __webpack_require__.p + \"dist/images/chips.jpg\";\n\n//# sourceURL=webpack:///./assets/img/chips.jpg?");
 
 /***/ }),
 

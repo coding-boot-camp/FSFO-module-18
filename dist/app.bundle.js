@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"images/chips.jpg\";\n\n//# sourceURL=webpack:///./assets/img/chips.jpg?");
+eval("module.exports = __webpack_require__.p + \"dist/images/chips.jpg\";\n\n//# sourceURL=webpack:///./assets/img/chips.jpg?");
 
 /***/ }),
 
@@ -104,7 +104,7 @@ eval("module.exports = __webpack_require__.p + \"images/chips.jpg\";\n\n//# sour
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"images/food-table.jpg\";\n\n//# sourceURL=webpack:///./assets/img/food-table.jpg?");
+eval("module.exports = __webpack_require__.p + \"dist/images/food-table.jpg\";\n\n//# sourceURL=webpack:///./assets/img/food-table.jpg?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("module.exports = __webpack_require__.p + \"images/food-table.jpg\";\n\n//#
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"images/grill.jpg\";\n\n//# sourceURL=webpack:///./assets/img/grill.jpg?");
+eval("module.exports = __webpack_require__.p + \"dist/images/grill.jpg\";\n\n//# sourceURL=webpack:///./assets/img/grill.jpg?");
 
 /***/ }),
 
