@@ -1,3 +1,5 @@
+import "bootstrap/js/dist/modal";
+
 $(document).ready(function() {
 	if(window.location.href.indexOf("ticket") > -1) {
 		const purchaseBtn = document.getElementById("purchaseBtn");

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/js/event.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/js/events.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,14 +97,25 @@ eval("function createEl(htmlString, attrs, ...children) {\n\tif (typeof htmlStri
 
 /***/ }),
 
-/***/ "./assets/js/event.js":
-/*!****************************!*\
-  !*** ./assets/js/event.js ***!
-  \****************************/
+/***/ "./assets/js/events.js":
+/*!*****************************!*\
+  !*** ./assets/js/events.js ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function($) {const createEl = __webpack_require__(/*! ./domMethods */ \"./assets/js/domMethods.js\");\n\n$(document).ready(function() {\n\nif (window.location.href.indexOf(\"event\") > -1) {\n\tvar currentEvent = JSON.parse(localStorage.getItem(\"currentEvent\")) || {\n\t\t\ttitle: \"Title Placeholder\",\n\t\t\tsubtitle: \"\",\n\t\t\tdescription: \"\"\n\t};\n\t\n\tvar pageEl = document.querySelector(\"#page\");\n\t\n\tvar containerEl = createEl(\"div\", {class: \"container\"},\n\t\tcreateEl(\"div\", {class: \"card mb-3\"}, \n\t\t\tcreateEl(\"img\", {class: \"card-img-top\", style: \"width: 5px\", src: currentEvent.image || \"https://via.placeholder.com/350x150\"}),\n\t\t\tcreateEl(\"div\", {class: \"card-body\"}, \n\t\t\t\tcreateEl(\"h1\", {class: \"card-title\"}, currentEvent.title || \"\"),\n\t\t\t\tcreateEl(\"h2\", {class: \"text-muted\"}, currentEvent.subtitle || \"\"),\n\t\t\t\tcreateEl(\"p\", {class: \"card-text mt-3\"}, currentEvent.description || loremIpsum),\n\t\t\t\tcreateEl(\"a\", {class: \"btn btn-primary\", href: \"tickets.html\"}, \"Buy Tickets\")\n\t\t\t)\n\t\t),\n\t\t\n\t)\n\tpageEl.appendChild(containerEl)\n\t}\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./assets/js/event.js?");
+eval("/* WEBPACK VAR INJECTION */(function($) {const createEl = __webpack_require__(/*! ./domMethods */ \"./assets/js/domMethods.js\");\n\nconst { createLoremIpsum } = __webpack_require__(/*! ./helpers */ \"./assets/js/helpers.js\")\n\n$(document).ready(function() {\n\n  if (window.location.href.indexOf(\"event\") > -1) {\n    var currentEvent = JSON.parse(localStorage.getItem(\"currentEvent\")) || {\n        title: \"Title Placeholder\",\n        subtitle: \"\",\n        description: \"\"\n    };\n    \n    var pageEl = document.querySelector(\"#page\");\n    \n    var containerEl = createEl(\"div\", {class: \"container\"},\n      createEl(\"div\", {class: \"card mb-3\"}, \n        createEl(\"img\", {class: \"card-img-top\", style: \"width: 5px\", src: currentEvent.image || \"https://via.placeholder.com/350x150\"}),\n        createEl(\"div\", {class: \"card-body\"}, \n          createEl(\"h1\", {class: \"card-title\"}, currentEvent.title || \"\"),\n          createEl(\"h2\", {class: \"text-muted\"}, currentEvent.subtitle || \"\"),\n          createEl(\"p\", {class: \"card-text mt-3\"}, currentEvent.description || createLoremIpsum(100)),\n          createEl(\"a\", {class: \"btn btn-primary\", href: \"tickets.html\"}, \"Buy Tickets\")\n        )\n      ),\n      \n    )\n    pageEl.appendChild(containerEl)\n    }\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./assets/js/events.js?");
+
+/***/ }),
+
+/***/ "./assets/js/helpers.js":
+/*!******************************!*\
+  !*** ./assets/js/helpers.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function dateConverter(UNIX_timestamp){\n  var a = new Date(UNIX_timestamp);\n  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];\n  var year = a.getFullYear();\n  var month = months[a.getMonth()];\n  var date = a.getDate();\n  var result =  month + ' ' + date + ', ' + year \n  return result;\n}\n\nfunction createLoremIpsum(numWords = 50) {\n  const loremIpsum = \"Lorem ipsum dolor amet tousled brooklyn meditation, polaroid offal kale chips raw denim tumblr succulents jianbing listicle. Man braid godard VHS freegan bespoke fixie XOXO ramps lo-fi edison bulb prism gochujang photo booth. Messenger bag bicycle rights trust fund franzen street art mixtape helvetica, sriracha dreamcatcher live-edge microdosing. Whatever cliche neutra iceland chambray, beard narwhal pop-up health goth readymade palo santo forage live-edge 3 wolf moon echo park edison bulb, viral iceland bicycle rights post-ironic celiac typewriter kinfolk mumblecore tilde palo santo. Dreamcatcher cred cliche, keffiyeh intelligentsia forage vice locavore aesthetic yr. Vexillologist shabby chic fixie, air plant helvetica health goth kickstarter four loko jean shorts tote bag green juice street art beard farm-to-table. Enamel pin jianbing photo booth, YOLO pour-over bushwick next level fingerstache vice retro disrupt cloud bread. Gastropub umami distillery chia food truck adaptogen. Forage hexagon helvetica kogi squid. Crucifix health goth bespoke typewriter fam hexagon helvetica, vice dreamcatcher chillwave tumeric. Keffiyeh aesthetic XOXO venmo live-edge kale chips mlkshk wolf williamsburg hella yr locavore. Tumblr unicorn chillwave, edison bulb occupy offal sartorial gastropub kickstarter. Bitters swag chartreuse single-origin coffee PBR&B post-ironic migas activated charcoal before they sold out iPhone seitan lumbersexual tofu tumeric selvage. Shoreditch hashtag literally, af intelligentsia crucifix sustainable +1 chambray adaptogen. Crucifix retro fixie knausgaard. Photo booth asymmetrical seitan, pug marfa tattooed roof party tacos gochujang woke kale chips vice organic. Street art mumblecore trust fund, normcore single-origin coffee meggings neutra tacos fam. Woke chia asymmetrical try-hard cloud bread hexagon leggings kogi taiyaki. Seitan humblebrag tote bag keytar YOLO art party. Semiotics cliche schlitz shaman, waistcoat chartreuse activated charcoal XOXO post-ironic helvetica messenger bag air plant vape sartorial. Typewriter thundercats direct trade edison bulb lomo la croix trust fund. Tote bag tofu lo-fi blue bottle. Drinking vinegar lyft messenger bag, leggings tofu 90's bitters four loko mustache sriracha pabst shabby chic humblebrag glossier. Meh skateboard yuccie tattooed adaptogen gastropub post-ironic put a bird on it green juice la croix hot chicken ennui cray dreamcatcher neutra. Chia semiotics art party fixie shaman echo park palo santo flexitarian. Letterpress retro chillwave, williamsburg palo santo fashion axe raclette lumbersexual keytar yr plaid ugh. Godard everyday carry twee, roof party affogato williamsburg photo booth. Irony lumbersexual letterpress, trust fund raclette wayfarers art party. Flannel bushwick yr tattooed.\"\n  \n  const result = loremIpsum.split(/\\s+/).slice(0,numWords).join(\" \");\n  return result;\n\n}\n\n\nmodule.exports = {\n  dateConverter,\n  createLoremIpsum\n}\n\n//# sourceURL=webpack:///./assets/js/helpers.js?");
 
 /***/ }),
 
