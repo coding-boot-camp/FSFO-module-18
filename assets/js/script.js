@@ -222,9 +222,39 @@ $(document).ready(function() {
 
   if (window.location.href.indexOf("schedule") > -1) {
 
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+
+    function dateConverter(UNIX_timestamp){
+      var a = new Date(UNIX_timestamp);
+      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      var year = a.getFullYear();
+      var month = months[a.getMonth()];
+      var date = a.getDate();
+      var result =  month + ' ' + date + ', ' + year 
+      return result;
+    }
+
+    function onEventClick(calEvent) {
+
+      const start = dateConverter(calEvent.start);
+      localStorage.setItem("currentEvent", JSON.stringify({
+        title: calEvent.title,
+        subtitle: start,
+        description: calEvent.description,
+        image: calEvent.image
+      }))
+      
+      window.location.href = "events.html"
+
+    }
+
     const events = [
       {
         title: 'Vegan Day',
+        start: new Date(y, m, 1),
         description: `Vegans unite! At this event, we'll be celebrating with vegan food from around the globe. With so many delicious vegan cuisine options, it's hard to pick one. What are you hungry for? Let us share with you!
         Veganism is a lifestyle choice—we're passionate about creating healthy and delicious food products without harming the environment, so please spread the word about our festival and about our work!
         Our goal is to share the incredible vegan food we've discovered in cities around the world! With so much delicious food and creative ideas on the horizon, it's time to celebrate and share the best vegan foods around the world.
@@ -233,12 +263,13 @@ $(document).ready(function() {
       },
       {
         title: 'Harvest Festival',
-        allDay: false,
+        start: new Date(y, m, 27),
         image: "https://images.unsplash.com/photo-1474440692490-2e83ae13ba29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
       },
       {
         title: 'Bacon Day',
-
+        start: new Date(y, m, d, 12, 0),
+        end: new Date(y, m, d, 20, 0),
         description: `Today's all about bacon! We'll be serving up the best tasting bacon around town! Let's all get excited about bacon together!
         As an appetizer, grab a side of our delicious BBQ pulled pork and pick up a delicious side of our homemade slaw and sauce! Then, choose from our bacon and egg rolls, our crispy bacon strips, or even our bacon-wrapped pretzel rolls. You decide!
         And when it's time to order, you can't help but order our homemade chipotle queso dip that uses bacon to make it a little healthier. (No kidding.)          
@@ -248,6 +279,21 @@ $(document).ready(function() {
       },
       {
         title: 'Grub it up!',
+        start: new Date(y, m, d+7, 15, 0),
+        image: "https://images.unsplash.com/photo-1534797258760-1bd2cc95a5bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80",
+      },
+      {
+        title: 'Pickle for your thoughts',
+        start: new Date(y, m, d+21, 12, 0),
+        description: `A celebration of the pickle.`,
+        image: "https://images.unsplash.com/photo-1528607929212-2636ec44253e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
+        allDay: false,
+      },
+      {
+        title: 'Fry-day',
+        description: `You bring it, we fry it. Everything tastes better fried! Whether it's your favorite sponge cake or a refreshing afternoon snack,
+        prepare to shock your tastebuds.`,
+        start: new Date(y, m, d+21, 15, 0),
         image: "https://images.unsplash.com/photo-1534797258760-1bd2cc95a5bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80",
       },
     ]
@@ -260,7 +306,7 @@ $(document).ready(function() {
 
     function createCards(events) {
       const cards = events.map((event) => (
-        createEl("div", {class: "card-body"}, 
+        createEl("div", {class: "card-body clickable", onClick: () => onEventClick(event)}, 
           createEl("h5", {class: "card-title"}, event.title || ""),
           createEl("p", {class: "card-text"}, event.subtitle || createSubtitle(loremIpsum)),
           createEl("hr")
@@ -269,25 +315,40 @@ $(document).ready(function() {
       return cards
     }
     
-    const containerEl = createEl("div", {class: "container"}, 
-      createEl("div", {class: "card"}, 
-        createEl("h5", {class: "card-header"}, "Friday"),
-        ...createCards(events)
+    const containerEl1 = createEl("div", {class: "container"}, 
+      createEl("div", {class: "card mb-5"}, 
+        createEl("h5", {class: "card-header"}, "Week One"),
+        ...createCards(events.slice(0,2))
       )
     )
 
-    pageEl.appendChild(containerEl);
+    const containerEl2 = createEl("div", {class: "container"}, 
+      createEl("div", {class: "card mb-5"}, 
+        createEl("h5", {class: "card-header"}, "Week Two"),
+        ...createCards(events.slice(2,4))
+      )
+    )
+
+    const containerEl3 = createEl("div", {class: "container"}, 
+      createEl("div", {class: "card mb-5"}, 
+        createEl("h5", {class: "card-header"}, "Week Three"),
+        ...createCards(events.slice(4,6))
+      )
+    )
+
+    const containerEl4 = createEl("div", {class: "container"}, 
+      createEl("div", {class: "card mb-5"}, 
+        createEl("h5", {class: "card-header"}, "Week Four"),
+        ...createCards(events.slice(0,2))
+      )
+    )
+
+    pageEl.appendChild(containerEl1);
+    pageEl.appendChild(containerEl2);
+    pageEl.appendChild(containerEl3);
+    pageEl.appendChild(containerEl4);
 
   }
-
-//   <div class="card">
-//   <h5 class="card-header">Featured</h5>
-//   <div class="card-body">
-//     <h5 class="card-title">Special title treatment</h5>
-//     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-//     <a href="#" class="btn btn-primary">Go somewhere</a>
-//   </div>
-// </div>
   // END OF SCHEDULE PAGE
 
   // TICKET PAGE

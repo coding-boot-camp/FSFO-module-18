@@ -75,3 +75,16 @@ footer {
   max-height: 30vw;
   object-fit: cover;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.schedule-bg {
+  background-image: url("https://images.unsplash.com/photo-1435527173128-983b87201f4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1947&q=80");
+  background-size: cover;
+}
+
+#page {
+  min-height: 1800px;
+}
