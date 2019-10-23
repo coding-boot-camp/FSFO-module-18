@@ -15,7 +15,7 @@ td {
 	margin-bottom: 10px;
 }
 #ticket-table {
-	margin-top: 12rem;
+	margin: 0 auto;
 	height: 45vh;
 	font-size: 18px;
 }

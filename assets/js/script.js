@@ -254,46 +254,59 @@ $(document).ready(function() {
     const events = [
       {
         title: 'Vegan Day',
-        start: new Date(y, m, 1),
+        start: new Date(y, m+1, 20),
         description: `Vegans unite! At this event, we'll be celebrating with vegan food from around the globe. With so many delicious vegan cuisine options, it's hard to pick one. What are you hungry for? Let us share with you!
-        Veganism is a lifestyle choice—we're passionate about creating healthy and delicious food products without harming the environment, so please spread the word about our festival and about our work!
-        Our goal is to share the incredible vegan food we've discovered in cities around the world! With so much delicious food and creative ideas on the horizon, it's time to celebrate and share the best vegan foods around the world.
-        We'll be bringing together all types of vegan food that's delicious regardless of where you are! Whether you're looking for a quick meal for lunch and dinner, an elaborate meal on the go, or just a great bowl of vegan soup for a special occasion, we invite you to be a part of something bigger than anything you've ever seen.`,
+        Veganism is a lifestyle choice—we're passionate about creating healthy and delicious food products without harming the environment, so please spread the word about our festival and about our work!`,
         image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
       },
       {
         title: 'Harvest Festival',
-        start: new Date(y, m, 27),
+        start: new Date(y, m+1, 20),
         image: "https://images.unsplash.com/photo-1474440692490-2e83ae13ba29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
       },
       {
         title: 'Bacon Day',
-        start: new Date(y, m, d, 12, 0),
-        end: new Date(y, m, d, 20, 0),
+        start: new Date(y, m+1, 20),
         description: `Today's all about bacon! We'll be serving up the best tasting bacon around town! Let's all get excited about bacon together!
-        As an appetizer, grab a side of our delicious BBQ pulled pork and pick up a delicious side of our homemade slaw and sauce! Then, choose from our bacon and egg rolls, our crispy bacon strips, or even our bacon-wrapped pretzel rolls. You decide!
-        And when it's time to order, you can't help but order our homemade chipotle queso dip that uses bacon to make it a little healthier. (No kidding.)          
-        We can't wait to see you!`,
+        As an appetizer, grab a side of our delicious BBQ pulled pork and pick up a delicious side of our homemade slaw and sauce! There will be bacon everywhere!!`,
         image: "https://images.unsplash.com/photo-1528607929212-2636ec44253e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
-        allDay: false,
-      },
-      {
-        title: 'Grub it up!',
-        start: new Date(y, m, d+7, 15, 0),
-        image: "https://images.unsplash.com/photo-1534797258760-1bd2cc95a5bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80",
-      },
-      {
-        title: 'Pickle for your thoughts',
-        start: new Date(y, m, d+21, 12, 0),
-        description: `A celebration of the pickle.`,
-        image: "https://images.unsplash.com/photo-1528607929212-2636ec44253e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
-        allDay: false,
+      
       },
       {
         title: 'Fry-day',
         description: `You bring it, we fry it. Everything tastes better fried! Whether it's your favorite sponge cake or a refreshing afternoon snack,
         prepare to shock your tastebuds.`,
-        start: new Date(y, m, d+21, 15, 0),
+        start: new Date(y, m+1, 21),
+        image: "https://images.unsplash.com/photo-1534797258760-1bd2cc95a5bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80",
+      },
+      {
+        title: 'Pizza Party!',
+        description: `This event is devoted to all those pizza lovers out there. Come enjoy fresh from the oven pizza and learn tips on making pizza at home from the pros!`,
+        start: new Date(y, m+1, 22),
+        image: "https://images.unsplash.com/photo-1534797258760-1bd2cc95a5bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80",
+      },
+      {
+        title: 'Pasta Bonanza',
+        description: `All things pasta.`,
+        start: new Date(y, m+1, 22),
+        image: "https://images.unsplash.com/photo-1534797258760-1bd2cc95a5bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80",
+      },
+      {
+        title: 'Fruity Foods!',
+        description: `We will be showcasing dishes where fruits are a primary ingredient. Come learn how you can add more fruits into your diet!`,
+        start: new Date(y, m+1, 22),
+        image: "https://images.unsplash.com/photo-1534797258760-1bd2cc95a5bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80",
+      },
+      {
+        title: 'Veggie Mix Up',
+        description: `We will be showcasing great dishes that have plenty of veggies and proteins! This is for all those out there who love food, but want to get more vegetables in their diets!`,
+        start: new Date(y, m+1, 23),
+        image: "https://images.unsplash.com/photo-1534797258760-1bd2cc95a5bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80",
+      },
+      {
+        title: 'Fry-day',
+        description: `You bring it, we fry it....again. This event is always a huge hit, so we hold it twice!!`,
+        start: new Date(y, m+1, 23),
         image: "https://images.unsplash.com/photo-1534797258760-1bd2cc95a5bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80",
       },
     ]
@@ -308,7 +321,7 @@ $(document).ready(function() {
       const cards = events.map((event) => (
         createEl("div", {class: "card-body clickable", onClick: () => onEventClick(event)}, 
           createEl("h5", {class: "card-title"}, event.title || ""),
-          createEl("p", {class: "card-text"}, event.subtitle || createSubtitle(loremIpsum)),
+          createEl("p", {class: "card-text"}, event.description || createSubtitle(loremIpsum)),
           createEl("hr")
         )
       ))
@@ -317,37 +330,29 @@ $(document).ready(function() {
     
     const containerEl1 = createEl("div", {class: "container"}, 
       createEl("div", {class: "card mb-5"}, 
-        createEl("h5", {class: "card-header"}, "Week One"),
-        ...createCards(events.slice(0,2))
+        createEl("h5", {class: "card-header"}, "Day 1"),
+        ...createCards(events.slice(0,3))
       )
     )
 
     const containerEl2 = createEl("div", {class: "container"}, 
       createEl("div", {class: "card mb-5"}, 
-        createEl("h5", {class: "card-header"}, "Week Two"),
-        ...createCards(events.slice(2,4))
+        createEl("h5", {class: "card-header"}, "Day 2"),
+        ...createCards(events.slice(3,6))
       )
     )
 
     const containerEl3 = createEl("div", {class: "container"}, 
       createEl("div", {class: "card mb-5"}, 
-        createEl("h5", {class: "card-header"}, "Week Three"),
-        ...createCards(events.slice(4,6))
-      )
-    )
-
-    const containerEl4 = createEl("div", {class: "container"}, 
-      createEl("div", {class: "card mb-5"}, 
-        createEl("h5", {class: "card-header"}, "Week Four"),
-        ...createCards(events.slice(0,2))
+        createEl("h5", {class: "card-header"}, "Day 3"),
+        ...createCards(events.slice(6,9))
       )
     )
 
     pageEl.appendChild(containerEl1);
     pageEl.appendChild(containerEl2);
     pageEl.appendChild(containerEl3);
-    pageEl.appendChild(containerEl4);
-
+   
   }
   // END OF SCHEDULE PAGE
 
