@@ -1,3 +1,7 @@
+const createEl = require("./domMethods");
+
+const { createLoremIpsum, dateConverter } = require("./helpers")
+
 $(document).ready(function() {
   if (window.location.href.indexOf("schedule") > -1) {
 
@@ -5,16 +9,6 @@ $(document).ready(function() {
       var d = date.getDate();
       var m = date.getMonth();
       var y = date.getFullYear();
-
-      function dateConverter(UNIX_timestamp){
-      var a = new Date(UNIX_timestamp);
-      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-      var year = a.getFullYear();
-      var month = months[a.getMonth()];
-      var date = a.getDate();
-      var result =  month + ' ' + date + ', ' + year 
-      return result;
-      }
 
       function onEventClick(calEvent) {
 
@@ -92,19 +86,15 @@ $(document).ready(function() {
 
       const pageEl = document.querySelector("#page");
 
-      function createSubtitle(str) {
-      return str.split(/\s+/).slice(0,10).join(" ");
-      }
-
       function createCards(events) {
-      const cards = events.map((event) => (
-          createEl("div", {class: "card-body clickable", onClick: () => onEventClick(event)}, 
-          createEl("h5", {class: "card-title"}, event.title || ""),
-          createEl("p", {class: "card-text"}, event.description || createSubtitle(loremIpsum)),
-          createEl("hr")
-          )
-      ))
-      return cards
+        const cards = events.map((event) => (
+            createEl("div", {class: "card-body clickable", onClick: () => onEventClick(event)}, 
+            createEl("h5", {class: "card-title"}, event.title || ""),
+            createEl("p", {class: "card-text"}, event.description || createLoremIpsum()),
+            createEl("hr")
+            )
+        ))
+        return cards
       }
       
       const containerEl1 = createEl("div", {class: "container"}, 
@@ -131,5 +121,6 @@ $(document).ready(function() {
       pageEl.appendChild(containerEl1);
       pageEl.appendChild(containerEl2);
       pageEl.appendChild(containerEl3);
+      console.log(pageEl)
   }
 });

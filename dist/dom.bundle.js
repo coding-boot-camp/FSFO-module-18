@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/js/script.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/js/domMethods.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./assets/js/script.js":
-/*!*****************************!*\
-  !*** ./assets/js/script.js ***!
-  \*****************************/
+/***/ "./assets/js/domMethods.js":
+/*!*********************************!*\
+  !*** ./assets/js/domMethods.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./assets/js/script.js?");
+eval("function createEl(htmlString, attrs, ...children) {\n\tif (typeof htmlString !== \"string\") {\n\t\tthrow Error(\"Argument 'htmlString' is required and must be a string\");\n\t}\n\n\tconst el = document.createElement(htmlString);\n\n\tif (typeof attrs === \"object\") {\n\t\tfor (let key in attrs) {\n\t\t\tif (key.substring(0, 2) === \"on\") {\n\t\t\t\tel.addEventListener(key.substring(2).toLowerCase(), attrs[key]);\n\t\t\t} else if (key === \"style\") {\n\t\t\t\tfor (let rule in attrs[key]) {\n\t\t\t\t\tel.style[rule] = attrs[key][rule];\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tel.setAttribute(key, attrs[key]);\n\t\t\t}\n\t\t}\n\t}\n\n\tchildren.forEach(function(child) {\n\t\tlet node;\n\n\t\tif (child.constructor.name.includes(\"Element\")) {\n\t\t\tnode = child;\n\t\t} else {\n\t\t\tnode = document.createTextNode(child);\n\t\t}\n\n\t\tel.appendChild(node);\n\t});\n\n\treturn el;\n}\n\nmodule.exports = createEl;\n\n//# sourceURL=webpack:///./assets/js/domMethods.js?");
 
 /***/ })
 
