@@ -1,78 +1,33 @@
 import 'bootstrap/js/dist/carousel';
 
+import img1 from "../img/food-table.jpg"
+import img2 from "../img/grill.jpg"
+import img3 from "../img/chips.jpg"
+
 $(document).ready(function() {
 
   const carouselSlides = [
     {
       title: "hi",
       subtitle: "hello",
-      img: "../img/chips.jpg"
+      img: img1
     },
     {
       title: "",
       subtitle: "",
-      img: ""
+      img: img2
     },
     {
       title: "",
       subtitle: "",
-      img: ""
+      img: img3
     }
   ]
-  $("#carousel-container").html(`
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div id="carousel-slide-container" class="carousel-inner" role="complementary">    
-    <div id="carousel-item-1" class="carousel-item fullscreen-carousel">
-      <div class="d-flex h-100 align-items-center justify-content-center carousel-caption">
-          <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <h2 class="display-4 mb-2">We travel all over the US</h2>
-            </div>
-            <div class="row align-items-center justify-content-center"> 
-              <h3>Check out our schedule!</h3>
-            </div>
-            <div class=" mt-4 row align-items-center justify-content-center"> 
-              <a class="btn btn-primary" href="schedule.html">
-                  View Schedule
-              </a>
-            </div>
-          </div>
-      </div>
-    </div>
-    <!-- Slide Three - Set the background image for this slide in the line below -->
-    <div id="carousel-item-" class="carousel-item fullscreen-carousel">
-      <div class="d-flex h-100 align-items-center justify-content-center carousel-caption">
-        <div class="container">
-          <div class="row align-items-center justify-content-center">
-              <h2 class="display-4 mb-2">Our food is seriously the bomb!</h2>
-          </div>
-          <div class="row align-items-center justify-content-center"> 
-            <h3>What are you waiting for?</h3>
-          </div>
-          <div class=" mt-4 row align-items-center justify-content-center"> 
-            <a class="btn btn-primary" href="tickets.html">
-                Purchase Tickets
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-</div>
-  `)
 
+  document.querySelector("#carousel-item-1").setAttribute("style", `background-image: url('${carouselSlides[0].img}')`)
+
+  document.querySelector("#carousel-item-2").setAttribute("style", `background-image: url('${carouselSlides[0].img}')`)
+
+  document.querySelector("#carousel-item-3").setAttribute("style", `background-image: url('${carouselSlides[0].img}')`)
 
 });

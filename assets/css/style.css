@@ -88,3 +88,8 @@ footer {
 #page {
   padding-bottom: 200px;
 }
+
+#carousel-container {
+  position: relative;
+  height: 100%;
+}
