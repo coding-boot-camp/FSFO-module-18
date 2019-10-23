@@ -1,5 +1,7 @@
 const createEl = require("./domMethods");
 
+import img from "../img/chips.jpg"
+
 const { createLoremIpsum } = require("./helpers")
 
 $(document).ready(function() {
@@ -10,7 +12,7 @@ $(document).ready(function() {
         subtitle: "",
         description: ""
     };
-    
+
     var pageEl = document.querySelector("#page");
     
     var containerEl = createEl("div", {class: "container"},
@@ -25,6 +27,8 @@ $(document).ready(function() {
       ),
       
     )
+    
+
     pageEl.appendChild(containerEl)
     }
 });

@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/img/chips.jpg":
+/*!******************************!*\
+  !*** ./assets/img/chips.jpg ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"dist/images/chips.jpg\";\n\n//# sourceURL=webpack:///./assets/img/chips.jpg?");
+
+/***/ }),
+
 /***/ "./assets/js/domMethods.js":
 /*!*********************************!*\
   !*** ./assets/js/domMethods.js ***!
@@ -101,10 +112,11 @@ eval("function createEl(htmlString, attrs, ...children) {\n\tif (typeof htmlStri
 /*!*****************************!*\
   !*** ./assets/js/events.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function($) {const createEl = __webpack_require__(/*! ./domMethods */ \"./assets/js/domMethods.js\");\n\nconst { createLoremIpsum } = __webpack_require__(/*! ./helpers */ \"./assets/js/helpers.js\")\n\n$(document).ready(function() {\n\n  if (window.location.href.indexOf(\"event\") > -1) {\n    var currentEvent = JSON.parse(localStorage.getItem(\"currentEvent\")) || {\n        title: \"Title Placeholder\",\n        subtitle: \"\",\n        description: \"\"\n    };\n    \n    var pageEl = document.querySelector(\"#page\");\n    \n    var containerEl = createEl(\"div\", {class: \"container\"},\n      createEl(\"div\", {class: \"card mb-3\"}, \n        createEl(\"img\", {class: \"card-img-top\", style: \"width: 5px\", src: currentEvent.image || \"https://via.placeholder.com/350x150\"}),\n        createEl(\"div\", {class: \"card-body\"}, \n          createEl(\"h1\", {class: \"card-title\"}, currentEvent.title || \"\"),\n          createEl(\"h2\", {class: \"text-muted\"}, currentEvent.subtitle || \"\"),\n          createEl(\"p\", {class: \"card-text mt-3\"}, currentEvent.description || createLoremIpsum(100)),\n          createEl(\"a\", {class: \"btn btn-primary\", href: \"tickets.html\"}, \"Buy Tickets\")\n        )\n      ),\n      \n    )\n    pageEl.appendChild(containerEl)\n    }\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./assets/js/events.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _img_chips_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/chips.jpg */ \"./assets/img/chips.jpg\");\n/* harmony import */ var _img_chips_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_img_chips_jpg__WEBPACK_IMPORTED_MODULE_0__);\nconst createEl = __webpack_require__(/*! ./domMethods */ \"./assets/js/domMethods.js\");\n\n\n\nconst { createLoremIpsum } = __webpack_require__(/*! ./helpers */ \"./assets/js/helpers.js\")\n\n$(document).ready(function() {\n\n  if (window.location.href.indexOf(\"event\") > -1) {\n    var currentEvent = JSON.parse(localStorage.getItem(\"currentEvent\")) || {\n        title: \"Title Placeholder\",\n        subtitle: \"\",\n        description: \"\"\n    };\n\n    var pageEl = document.querySelector(\"#page\");\n    \n    var containerEl = createEl(\"div\", {class: \"container\"},\n      createEl(\"div\", {class: \"card mb-3\"}, \n        createEl(\"img\", {class: \"card-img-top\", style: \"width: 5px\", src: currentEvent.image || \"https://via.placeholder.com/350x150\"}),\n        createEl(\"div\", {class: \"card-body\"}, \n          createEl(\"h1\", {class: \"card-title\"}, currentEvent.title || \"\"),\n          createEl(\"h2\", {class: \"text-muted\"}, currentEvent.subtitle || \"\"),\n          createEl(\"p\", {class: \"card-text mt-3\"}, currentEvent.description || createLoremIpsum(100)),\n          createEl(\"a\", {class: \"btn btn-primary\", href: \"tickets.html\"}, \"Buy Tickets\")\n        )\n      ),\n      \n    )\n    \n\n    pageEl.appendChild(containerEl)\n    }\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./assets/js/events.js?");
 
 /***/ }),
 

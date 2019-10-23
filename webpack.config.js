@@ -7,11 +7,18 @@ const config = {
     schedule: './assets/js/schedule.js',
     tickets: './assets/js/tickets.js',
     dom: './assets/js/domMethods.js',
-    bootstrap: './assets/js/vendor/bootstrap.js'
   },
   output: {
     filename: '[name].bundle.js',
     path: __dirname + '/dist'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: 'file-loader?name=[name].[ext]&outputPath=./dist/images/'
+      },
+    ],
   },
   plugins: [
     new webpack.ProvidePlugin({
