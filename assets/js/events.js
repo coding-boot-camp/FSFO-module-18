@@ -1,21 +1,19 @@
 const createEl = require("./domMethods");
 
-import img from "../img/chips.jpg"
-
 const { createLoremIpsum } = require("./helpers")
 
 $(document).ready(function() {
 
   if (window.location.href.indexOf("event") > -1) {
-    var currentEvent = JSON.parse(localStorage.getItem("currentEvent")) || {
+    const currentEvent = JSON.parse(localStorage.getItem("currentEvent")) || {
         title: "Title Placeholder",
         subtitle: "",
         description: ""
     };
 
-    var pageEl = document.querySelector("#page");
+    const pageEl = document.querySelector("#page");
     
-    var containerEl = createEl("div", {class: "container"},
+    const containerEl = createEl("div", {class: "container"},
       createEl("div", {class: "card mb-3"}, 
         createEl("img", {class: "card-img-top", style: "width: 5px", src: currentEvent.image || "https://via.placeholder.com/350x150"}),
         createEl("div", {class: "card-body"}, 
