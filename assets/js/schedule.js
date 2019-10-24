@@ -97,7 +97,7 @@ $(document).ready(function() {
         return cards
       }
       
-      const containerEl1 = createEl("div", {class: "container"}, 
+      const containerEl1 = createEl("div", {class: "container mt-5"}, 
       createEl("div", {class: "card mb-5"}, 
           createEl("h5", {class: "card-header"}, "Day 1"),
           ...createCards(events.slice(0,3))

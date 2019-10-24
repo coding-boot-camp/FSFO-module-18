@@ -1,7 +1,6 @@
 html, body { margin: 0; padding: 0; }
 
 body {
-  margin-top: 100px !important;
   min-height: 100vh;
   position: relative;
 }
@@ -87,12 +86,17 @@ footer {
 }
 
 #page {
+  margin-top: 100px;
   padding-bottom: 200px;
 }
 
 #carousel-container {
   position: relative;
   height: 100%;
+}
+
+.mt-10 {
+  margin-top: 100px;
 }
 
 p.lead {
