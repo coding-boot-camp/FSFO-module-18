@@ -1,7 +1,8 @@
+html, body { margin: 0; padding: 0; }
 
 body {
   margin-top: 100px !important;
-  min-height: 1000px;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -9,7 +10,7 @@ footer {
   background: #666;
   position: absolute;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   clear: both;
 }
 
