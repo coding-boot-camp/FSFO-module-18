@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 
 const config = {
   entry: {
@@ -30,7 +31,14 @@ const config = {
         $: "jquery",
         jQuery: "jquery"
     }),
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin(),
+    new SWPrecacheWebpackPlugin({
+      cacheId: "my-domain-cache-id",
+      dontCacheBustUrlsMatching: /\.\w{8}\./,
+      filename: "service-worker.js",
+      minify: true,
+      staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/]
+    }),
 ],
   mode: "development"
 };
