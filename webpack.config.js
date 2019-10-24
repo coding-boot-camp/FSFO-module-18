@@ -1,4 +1,4 @@
-var webpack = require("webpack");
+const webpack = require("webpack");
 
 const config = {
   entry: {
@@ -16,7 +16,11 @@ const config = {
     rules: [
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: 'file-loader?name=[name].[ext]&outputPath=dist/images/'
+        use: ['file-loader?name=[name].[ext]&outputPath=dist/images/', 
+        {
+          loader: 'image-webpack-loader',
+        },
+      ],
       },
     ],
   },
