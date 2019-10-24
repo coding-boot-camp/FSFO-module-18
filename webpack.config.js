@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const config = {
   entry: {
@@ -28,7 +29,8 @@ const config = {
     new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery"
-    })
+    }),
+    new BundleAnalyzerPlugin()
 ],
   mode: "development"
 };
