@@ -2,32 +2,46 @@ import 'bootstrap/js/dist/carousel';
 
 import img1 from "../img/food-table.jpg"
 import img2 from "../img/grill.jpg"
-import img3 from "../img/chips.jpg"
 
 $(document).ready(function() {
 
+  // First image is hard coded in index.html
   const carouselSlides = [
     {
-      title: "hi",
-      subtitle: "hello",
-      img: img1
+      title: "We travel all over the US",
+      subtitle: "Check out our schedule!",
+      img: img1,
+      btnText: "View Schedule",
+      btnUrl: "schedule.html"
     },
     {
-      title: "",
-      subtitle: "",
-      img: img2
+      title: "Our food is seriously the bomb!",
+      subtitle: "What are you waiting for?",
+      img: img2,
+      btnText: "Purchase Tickets",
+      btnUrl: "tickets.html"
     },
-    {
-      title: "",
-      subtitle: "",
-      img: img3
-    }
   ]
 
-  document.querySelector("#carousel-item-1").setAttribute("style", `background-image: url('${carouselSlides[0].img}')`)
-
-  document.querySelector("#carousel-item-2").setAttribute("style", `background-image: url('${carouselSlides[0].img}')`)
-
-  document.querySelector("#carousel-item-3").setAttribute("style", `background-image: url('${carouselSlides[0].img}')`)
+  carouselSlides.forEach((slide, i) => {
+    $('.carousel-inner').append(`
+  <div class="carousel-item fullscreen-carousel" style="background-image: url('${slide.img}')">
+    <div class="d-flex h-100 align-items-center justify-content-center carousel-caption">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+              <h2 class="display-4 mb-2">${slide.title}</h2>
+          </div>
+          <div class="row align-items-center justify-content-center"> 
+            <h3>${slide.subtitle}</h3>
+          </div>
+          <div class=" mt-4 row align-items-center justify-content-center"> 
+            <a class="btn btn-primary" href="${slide.btnUrl}">
+                ${slide.btnText}
+            </a>
+          </div>
+        </div>
+    </div>
+  </div>`)
+  })
 
 });
