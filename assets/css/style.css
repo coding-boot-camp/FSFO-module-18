@@ -96,4 +96,5 @@ footer {
 
 p.lead {
   background-color: rgba(59, 61, 59, 0.45);
+  display: inline-block;
 }
