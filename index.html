@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Food Festival</title>
+  <link rel="canonical" href="https://coding-boot-camp.github.io/FSFO-module-18/" />
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -169,7 +170,7 @@
 <script type="text/javascript">
   (function() {
     if("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("./service-worker.js", { scope: "." })
+      navigator.serviceWorker.register("./service-worker.js", { scope: "/FSFO-module-18/" })
         .then(() => console.log("Service Worker registered successfully."))
         .catch(error => console.log("Service Worker registration failed:", error));
     }
