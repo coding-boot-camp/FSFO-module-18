@@ -4,22 +4,22 @@ var PRECACHE = "precache-v1";
 var RUNTIME = "runtime";
 var CACHE_NAME = APP_PREFIX + VERSION
 const FILES_TO_CACHE = [
-  "/index.html",
-  "/events.html",
-  "/tickets.html",
-  "/schedule.html",
-  "/assets/css/style.css",
-  "/assets/css/bootstrap.css",
-  "/assets/css/tickets.css",
-  "/dist/app.bundle.js",
-  "/dist/dom.bundle.js",
-  "/dist/events.bundle.js",
-  "/dist/schedule.bundle.js",
-  "/dist/tickets.bundle.js",
-  "/dist/schedule.bundle.js",
-  "/dist/images/chips.jpg",
-  "/dist/images/food-table.jpg",
-  "/dist/images/grill.jpg",
+  "./index.html",
+  "./events.html",
+  "./tickets.html",
+  "./schedule.html",
+  "./assets/css/style.css",
+  "./assets/css/bootstrap.css",
+  "./assets/css/tickets.css",
+  "./dist/app.bundle.js",
+  "./dist/dom.bundle.js",
+  "./dist/events.bundle.js",
+  "./dist/schedule.bundle.js",
+  "./dist/tickets.bundle.js",
+  "./dist/schedule.bundle.js",
+  "./dist/images/chips.jpg",
+  "./dist/images/food-table.jpg",
+  "./dist/images/grill.jpg",
 ];
 
 
