@@ -1,6 +1,8 @@
 const webpack = require("webpack");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
+const WebpackPwaManifest = require("webpack-pwa-manifest");
+const path = require("path");
 
 const config = {
   entry: {
@@ -18,7 +20,7 @@ const config = {
     rules: [
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: ['file-loader?name=[name].[ext]&outputPath=dist/images/', 
+        use: ['file-loader?name=[name].[ext]&outputPath=./dist/images/', 
         {
           loader: 'image-webpack-loader',
         },
@@ -39,6 +41,20 @@ const config = {
       minify: true,
       staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/]
     }),
+    new WebpackPwaManifest({
+      name: "Food Event",
+      short_name: "Foodies",
+      description: "An app that allows you to view upcoming food events.",
+      background_color: "#01579b",
+      theme_color: "#ffffff",
+      "theme-color": "#ffffff",
+      start_url: "/",
+      icons: [{
+        src: path.resolve("assets/img/icons/icon-512x512.png"),
+        sizes: [96, 128, 192, 256, 384, 512],
+        destination: path.join("assets", "icons")
+      }]
+    })
 ],
   mode: "development"
 };
