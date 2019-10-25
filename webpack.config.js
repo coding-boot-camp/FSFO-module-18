@@ -20,7 +20,17 @@ const config = {
     rules: [
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: ['file-loader?name=[name].[ext]&outputPath=./dist/images/', 
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name (file) {
+              return '[path][name].[ext]'
+            },
+            publicPath: function(url) {
+                return url.replace('../', '/assets/')
+            },
+          }  
+        }, 
         {
           loader: 'image-webpack-loader',
         },
