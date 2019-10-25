@@ -13,9 +13,9 @@ const FILES_TO_CACHE = [
   "/dist/schedule.bundle.js",
   "/dist/tickets.bundle.js",
   "/dist/schedule.bundle.js",
-  "/dist/images/chips.jpg",
-  "/dist/images/food-table.jpg",
-  "/dist/images/grill.jpg",
+  "/dist/assets/img/chips.jpg",
+  "/dist/assets/img/food-table.jpg",
+  "/dist/assets/img/grill.jpg",
 ];
 
 
