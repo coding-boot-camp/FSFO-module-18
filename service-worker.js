@@ -1,3 +1,8 @@
+var APP_PREFIX = 'FoodEvent';     
+var VERSION = 'version_01';
+var PRECACHE = "precache-v1";
+var RUNTIME = "runtime";
+var CACHE_NAME = APP_PREFIX + VERSION
 const FILES_TO_CACHE = [
   "/",
   "/index.html",
@@ -19,8 +24,6 @@ const FILES_TO_CACHE = [
 ];
 
 
-const PRECACHE = "precache-v1";
-const RUNTIME = "runtime";
 
 self.addEventListener("install", event => {
   event.waitUntil(
