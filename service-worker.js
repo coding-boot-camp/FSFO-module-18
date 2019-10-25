@@ -4,22 +4,22 @@ var PRECACHE = "precache-v1";
 var RUNTIME = "runtime";
 var CACHE_NAME = APP_PREFIX + VERSION
 const FILES_TO_CACHE = [
-  "./",
-  "./index.html",
-  "./events.html",
-  "./tickets.html",
-  "./schedule.html",
-  "./assets/css/style.css",
-  "./assets/css/bootstrap.css",
-  "./assets/css/tickets.css",
-  "./dist/app.bundle.js",
-  "./dist/dom.bundle.js",
-  "./dist/events.bundle.js",
-  "./dist/schedule.bundle.js",
-  "./dist/tickets.bundle.js",
-  "./dist/schedule.bundle.js",
-  "./dist/assets/img/food-table.jpg",
-  "./dist/assets/img/grill.jpg",
+  "/FSFO-module-18/",
+  "/FSFO-module-18/index.html",
+  "/FSFO-module-18/events.html",
+  "/FSFO-module-18/tickets.html",
+  "/FSFO-module-18/schedule.html",
+  "/FSFO-module-18/assets/css/style.css",
+  "/FSFO-module-18/assets/css/bootstrap.css",
+  "/FSFO-module-18/assets/css/tickets.css",
+  "/FSFO-module-18/dist/app.bundle.js",
+  "/FSFO-module-18/dist/dom.bundle.js",
+  "/FSFO-module-18/dist/events.bundle.js",
+  "/FSFO-module-18/dist/schedule.bundle.js",
+  "/FSFO-module-18/dist/tickets.bundle.js",
+  "/FSFO-module-18/dist/schedule.bundle.js",
+  "/FSFO-module-18/dist/assets/img/food-table.jpg",
+  "/FSFO-module-18/dist/assets/img/grill.jpg",
 ];
 
 
