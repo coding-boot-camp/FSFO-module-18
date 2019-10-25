@@ -57,8 +57,7 @@ const config = {
       description: "An app that allows you to view upcoming food events.",
       background_color: "#01579b",
       theme_color: "#ffffff",
-      start_url: "./index.html",
-      scope: ".",
+      start_url: "./FSFO-module-18",
       icons: [{
         src: path.resolve("assets/img/icons/icon-512x512.png"),
         sizes: [96, 128, 192, 256, 384, 512],
