@@ -169,9 +169,11 @@
 </body>
 <script type="text/javascript">
   (function() {
-    if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/FSFO-module0-18/service-worker.js', {scope: '/FSFO-module-18/'})
-  }
+    if("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./service-worker.js", { scope: "/FSFO-module-18/" })
+        .then(() => console.log("Service Worker registered successfully."))
+        .catch(error => console.log("Service Worker registration failed:", error));
+    }
   })();
 </script>
 </html>
