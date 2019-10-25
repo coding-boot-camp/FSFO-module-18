@@ -15,7 +15,6 @@ const FILES_TO_CACHE = [
   "/FSFO-module-18/dist/app.bundle.js",
   "/FSFO-module-18/dist/dom.bundle.js",
   "/FSFO-module-18/dist/events.bundle.js",
-  "/FSFO-module-18/dist/schedule.bundle.js",
   "/FSFO-module-18/dist/tickets.bundle.js",
   "/FSFO-module-18/dist/schedule.bundle.js"
   // "/FSFO-module-18/dist/assets/img/food-table.jpg",
