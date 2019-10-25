@@ -1,4 +1,4 @@
-require("bootstrap/js/dist/modal");
+import 'bootstrap';
 
 const createEl = require("./domMethods");
 
