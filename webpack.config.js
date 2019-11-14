@@ -43,13 +43,8 @@ const config = {
         $: "jquery",
         jQuery: "jquery"
     }),
-    new BundleAnalyzerPlugin(),
-    new SWPrecacheWebpackPlugin({
-      cacheId: "my-domain-cache-id",
-      dontCacheBustUrlsMatching: /\.\w{8}\./,
-      filename: "service-worker.js",
-      minify: true,
-      staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/]
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static"
     }),
     new WebpackPwaManifest({
       name: "Food Event",
