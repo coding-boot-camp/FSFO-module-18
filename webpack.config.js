@@ -9,7 +9,6 @@ const config = {
     events: './assets/js/events.js',
     schedule: './assets/js/schedule.js',
     tickets: './assets/js/tickets.js',
-    dom: './assets/js/domMethods.js',
   },
   output: {
     filename: '[name].bundle.js',

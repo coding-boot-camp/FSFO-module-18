@@ -1,4 +1,4 @@
-import 'bootstrap';
+require("bootstrap");
 
 const createEl = require("./domMethods");
 

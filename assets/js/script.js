@@ -1,4 +1,4 @@
-import 'bootstrap';
+require("bootstrap");
 
 import img1 from "../img/food-table.jpg"
 import img2 from "../img/grill.jpg"
